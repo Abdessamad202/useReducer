@@ -9,7 +9,7 @@ const Card = () => {
   ];
   const totalPrice = (arr) => arr.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
   const showProducts = (arr, card = false) => {
-    return arr.map((el) => {
+    return arr.filter( el => el.quantity !== 0 ).map((el) => {
       return (
         <tr key={el.id}>
           <td>{el.id}</td>
