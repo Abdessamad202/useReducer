@@ -32,7 +32,7 @@ const cardReducer = (state, action) => {
         el => el.id === action.payload.id
           ? { ...el, quantity: el.quantity - 1 }
           : el
-      ).filter(el => el.quantity !== 0)
+      )
     }
     default:
       return state
